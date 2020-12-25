@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="linear.js"></script>
+  <link rel="stylesheet" href="../tree.css">
+  <title>D3 Tree</title>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+          <li  class="active">
+              <a href="#">Linear</a>
+              <hr>
+            </li>
+            <li>
+                <a id="radial" href="../radial/radial.html">Radial</a>
+            <hr>
+          </li>
+        </ul>
+      </nav>
+
+    <form id="date">
+        <label for="from"> From: 
+            <input type="date" id="from" >
+        </label>
+        <label for="to"> To: 
+            <input type="date" id="to" >
+        </label>
+        <button id="submit">Submit</button>
+    </form>
+
+
+    <div id="tree-container"></div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+svg:hover {
+  cursor: grab
+}
+
+svg:active   {
+  cursor: grabbing
+}
+
+.node {
+    cursor: pointer;
+  }
+
+  .overlay{
+      background-color:#EEE;
+  }
+   
+  .node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+   
+  .node text {
+    font-size:10px; 
+    font-family:sans-serif;
+  }
+   
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+  }
+
+  .templink {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+  }
+
+  .ghostCircle.show{
+    display:block;
+  }
+
+  .ghostCircle, .activeDrag .ghostCircle{
+    display: none;
+  }
+
+
+  #date {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0 0 20px;
+
+}
+
+label {
+  margin: 10px 0;
+  font-weight: 600
+}
+
+input {
+    height: 30px;
+    border: 2px solid gray;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+#submit {
+    border: none;
+    border-radius: 20px;
+    background: #c3c3c3;
+    padding: 12px 8px;
+    width: 100px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease
+}
+#submit:hover {
+  background: darkslategray
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 50px;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0 10px;
+  padding: 0;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  flex-direction : column;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+
+ul li a {
+  transition: all 0.3s ease;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+ul li:hover a,
+.active a {
+  transform: scale(1.5)
+}
+
+hr {
+  width: 0;
+  height: 5px;
+  border: none;
+  transition: all 0.3s ease
+}
+
+ul li:hover hr,
+.active hr {
+  background: gray;
+  border-radius: 20px;
+  width: 100%;
+}
